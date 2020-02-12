@@ -1,0 +1,48 @@
+
+    <body>
+     
+       <h2 style="font-size: 28px">Sign up</h2><br>
+          <div class="w3ls-login box box--big">
+                <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+              <%= render "devise/shared/error_messages", resource: resource %>
+                    <div class="row">
+                              
+                                   <div class="agile-field-txt">
+                                   <label> <i class="fa fa-user" aria-hidden="true"></label></i> <%= f.label :email %><br />
+                                    <%= f.text_field :email, autofocus: true, autocomplete: "email" %>
+                                  </div>
+                                  <div class="agile-field-txt">
+                                     <label> <i class="fa fa-user" aria-hidden="true"></label></i> <%= f.label :name %><br />
+                                    <%= f.text_field :name %>
+                                  </div>
+                               
+                           
+                                 <div class="agile-field-txt">
+                                    <label><i class="fa fa-unlock-alt" aria-hidden="true"></i></label><%= f.label :password %>
+                                    <% if @minimum_password_length %>
+                                    <em>(<%= @minimum_password_length %> characters minimum)</em>
+                                    <% end %><br />
+                                    <%= f.password_field :password, autocomplete: "new-password" %>
+                                  </div>
+
+                                <div class="agile-field-txt">
+                                   <label><i class="fa fa-unlock-alt" aria-hidden="true"></i></label> <%= f.label :password_confirmation %><br />
+                                    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+                                  </div>
+                         
+                            
+                            
+                              <%= f.submit "Sign up"   %><br>
+                               
+                              </div>
+
+                            
+                             
+                             
+                           
+
+                    </div>
+                </div>
+            <% end %>
+            <%= render "devise/shared/links" %>   
+   </body>

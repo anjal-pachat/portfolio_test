@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>MyPortfolio</title>
+    <%= csrf_meta_tags %>
+
+   
+
+    <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    </style>
+  </head>
+
+  <body>
+    <%= render  'shared/blog_nav' %>
+    
+    <%= render  'shared/blog_masthead' %>
+    
+    <!-- start container and row element -->
+    <div class="container">
+
+      <div class="row">
+           <%= yield %>
+       </div>    
+     </div>    
+     <%= render 'shared/blog_sidebar' %>
+     <%= render 'shared/blog_footer' %>
+ 
+  </body>
+
+                
+</html>

@@ -1,0 +1,33 @@
+
+<body>
+  <h1>Forgot your password?</h1>
+ 
+  <div class="w3ls-login box box--big">
+    <!-- form starts here -->
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %><%= render "devise/shared/error_messages", resource: resource %>
+      <div class="agile-field-txt">
+      <label> <i class="fa fa-user" aria-hidden="true"></label></i><%= f.label :email %><br />
+      <%= f.text_field :email, autofocus: true, autocomplete: "email",placeholder: "Enter your email" %>
+      </div>
+    
+      
+      <!-- script for show password -->
+      <script>
+        function myFunction() {
+          var x = document.getElementById("myInput");
+          if (x.type === "password") {
+            x.type = "text";
+          } else {
+            x.type = "password";
+          }
+        }
+      </script>
+      <!-- //end script -->
+      <%= f.submit "Send me reset password" %>
+    <% end%>
+  </div>
+  <!-- //form ends here -->
+  <!--copyright-->
+  <%= render "devise/shared/links" %>
+
+</body>

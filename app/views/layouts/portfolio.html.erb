@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+ 
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>MyPortfolio</title>
+    <%= csrf_meta_tags %>
+
+   
+
+    <%= stylesheet_link_tag  'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+     <%= render "shared/portfolios_nav" %>
+     <%= render "shared/portfolios_masthead"%>
+      <%= yield %>
+     <%= render "shared/portfolios_footer"%>
+    <!-- end footer -->
+  </body>
+
+                
+</html>
